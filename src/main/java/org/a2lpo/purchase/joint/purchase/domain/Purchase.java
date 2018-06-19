@@ -17,4 +17,9 @@ public class Purchase {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
     private User author;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "purchase_type_id")
+    private PurchaseType purchaseCategory;
+
 }

@@ -2,6 +2,7 @@ package org.a2lpo.purchase.joint.purchase.controller;
 
 import org.a2lpo.purchase.joint.purchase.repos.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,9 +19,11 @@ public class TestController {
         return "test";
     }
 
+    @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping(value = "userlist")
     public String userList(Model model) {
         model.addAttribute("users", userRepo.findAll());
         return "userlist";
     }
+
 }
