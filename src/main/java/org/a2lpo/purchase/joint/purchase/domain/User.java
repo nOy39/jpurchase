@@ -26,7 +26,6 @@ public class User implements UserDetails {
 
     @NotBlank(message = "Password can`t be empty")
     private String password;
-
     private boolean active;
 
     @Email(message = "Email is not correct")
@@ -89,6 +88,7 @@ public class User implements UserDetails {
     public boolean isOrganizer() {
         return roles.contains(Role.ORGANIZER);
     }
+
     public Set<Role> getRoles() {
         return roles;
     }
