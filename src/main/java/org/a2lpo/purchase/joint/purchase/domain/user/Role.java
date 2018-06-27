@@ -1,4 +1,4 @@
-package org.a2lpo.purchase.joint.purchase.domain;
+package org.a2lpo.purchase.joint.purchase.domain.user;
 
 import org.springframework.security.core.GrantedAuthority;
 

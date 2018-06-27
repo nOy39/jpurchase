@@ -16,6 +16,6 @@ public class UploadFile {
     private String originalFilename;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "project_id")
+    @JoinColumn(name = "article_id")
     private Article article;
 }

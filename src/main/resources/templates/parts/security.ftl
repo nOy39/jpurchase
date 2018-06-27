@@ -6,9 +6,9 @@
         author = Session.SPRING_SECURITY_CONTEXT.authentication.principal
         name = author.getUsername()
         isAdmin = author.isAdmin()
-        isUser = author.isUser()
-        isOrganizer = author.isOrganizer()
         isSuperUser = author.isSuperUser()
+        isOrganizer = author.isOrganizer()
+        isUser = author.isUser()
     >
     <#else>
     <#assign

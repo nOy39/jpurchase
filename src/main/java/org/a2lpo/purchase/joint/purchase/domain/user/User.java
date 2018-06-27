@@ -1,6 +1,7 @@
-package org.a2lpo.purchase.joint.purchase.domain;
+package org.a2lpo.purchase.joint.purchase.domain.user;
 
 import lombok.Data;
+import org.a2lpo.purchase.joint.purchase.domain.eav.GroupArticleDetails;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -8,6 +9,7 @@ import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import java.util.Collection;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -23,6 +25,16 @@ public class User implements UserDetails {
 
     @NotBlank(message = "Username can`t be empty.")
     private String username;
+
+    private String firstname;
+    private String lastname;
+    private long phone;
+    private String city;
+    private String district;
+    private String street;
+    private String home;
+    private String flat;
+    private String avatar;
 
     @NotBlank(message = "Password can`t be empty")
     private String password;

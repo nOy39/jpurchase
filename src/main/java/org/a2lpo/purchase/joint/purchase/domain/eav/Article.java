@@ -1,7 +1,7 @@
 package org.a2lpo.purchase.joint.purchase.domain.eav;
 
 import lombok.Data;
-import org.a2lpo.purchase.joint.purchase.domain.User;
+import org.a2lpo.purchase.joint.purchase.domain.user.User;
 
 import javax.persistence.*;
 import java.math.BigDecimal;

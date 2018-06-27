@@ -5,28 +5,25 @@
     Hello this is the test
 </h3>
     <#if know>
-<ul>
-    <#if isUser>
-    <li>
-        ТЕСТ для ЮЗЕРА
-    </li>
+        <ul>
+        <#if isUser>
+            <li>
+                ТЕСТ для ЮЗЕРА
+            </li>
+        </#if>
+        <#if isOrganizer>
+            <li>
+                Тест для организатора
+            </li>
+        </#if>
+        <#if isSuperUser>
+            <li>
+                <a href="/test/article/details">group_details_</a>
+            </li>
+        </#if>
+        </ul>
+    <#else>
+    Привет гость
     </#if>
-    <#if isOrganizer>
-    <li>
-        Тест для организатора
-    </li>
-    </#if>
-    <#if isSuperUser>
-        <li>
-            Тест для суперюзера
-        </li>
-    </#if>
-    <#if isAdmin>
-    <li>
-        <a href="/test/userlist">User List</a>
-    </li>
-    </#if>
-</ul>
-    <#else >Привет гость
-    </#if>
+
 </@c.page>

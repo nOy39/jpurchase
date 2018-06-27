@@ -3,15 +3,15 @@
 
 <@c.page>
 <div class="container">
-    <p>Users list:</p>
+    <p>Список всех пользователей:</p>
     <table class="table table-bordered">
         <thead>
         <tr>
             <th>ID</th>
             <th>USERNAME</th>
             <th>EMAIL</th>
-            <th>ROLES</th>
-            <th>MANAGE</th>
+            <th>ПРАВА</th>
+            <th>УПРАВЛЕНИЕ</th>
         </tr>
         </thead>
         <tbody>
@@ -27,7 +27,7 @@
                 </#list>
             </td>
             <td><#if user.username != 'admin'>
-            <a href="/test/useredit">Edit</a></td>
+            <a href="/test/useredit/${user.id}">Edit</a></td>
             </#if>
         </tr>
         </#list>
@@ -35,5 +35,5 @@
     </table>
 </div>
 
-<a href="/test">Main page</a>
+<a href="/">Main page</a>
 </@c.page>
